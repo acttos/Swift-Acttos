@@ -493,6 +493,7 @@
 				7DDC60EF1D65D86500AE30D2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7DDC60F51D65D86500AE30D2 /* Build configuration list for PBXNativeTarget "TimerTests" */ = {
 			isa = XCConfigurationList;
@@ -501,6 +502,7 @@
 				7DDC60F11D65D86500AE30D2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7DDC60F61D65D86500AE30D2 /* Build configuration list for PBXNativeTarget "TimerUITests" */ = {
 			isa = XCConfigurationList;
@@ -509,6 +511,7 @@
 				7DDC60F31D65D86500AE30D2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
