@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>DeviceAuth.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>2</integer>
+		</dict>
 		<key>Swift-Acttos.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -17,6 +22,11 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>7D31788E1D6BF468001F2AC0</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>7DC794151D5C67FF007E352C</key>
 		<dict>
 			<key>primary</key>

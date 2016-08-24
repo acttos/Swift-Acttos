@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="DeviceAuth" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ymb-RA-WaS">
+                                <rect key="frame" x="126" y="73" width="123" height="30"/>
+                                <state key="normal" title="Request for Audio"/>
+                                <connections>
+                                    <action selector="audioRequestAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="L17-Wv-J5C"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6v3-Up-tO8">
+                                <rect key="frame" x="126" y="159" width="39" height="30"/>
+                                <state key="normal" title="Start!"/>
+                                <connections>
+                                    <action selector="startButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wD9-J8-cTD"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pwm-J0-iWe">
+                                <rect key="frame" x="68" y="215" width="240" height="240"/>
+                                <color key="backgroundColor" red="0.18238589638157893" green="0.37435752467105265" blue="0.609375" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="RBt-X7-gaw"/>
+                                    <constraint firstAttribute="width" constant="250" id="TFD-sO-1Ts"/>
+                                    <constraint firstAttribute="height" constant="250" id="v1u-or-ydg"/>
+                                    <constraint firstAttribute="height" constant="240" id="z48-Nk-Gjo"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="TFD-sO-1Ts"/>
+                                        <exclude reference="v1u-or-ydg"/>
+                                    </mask>
+                                </variation>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y0v-Ar-sto">
+                                <rect key="frame" x="126" y="116" width="123" height="30"/>
+                                <state key="normal" title="Request for Video"/>
+                                <connections>
+                                    <action selector="videoRequestAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Zj7-Eq-I5U"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="pwm-J0-iWe" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="0N0-gV-UaA"/>
+                            <constraint firstItem="pwm-J0-iWe" firstAttribute="top" secondItem="6v3-Up-tO8" secondAttribute="bottom" constant="26" id="6uc-fl-ywH"/>
+                            <constraint firstItem="y0v-Ar-sto" firstAttribute="leading" secondItem="ymb-RA-WaS" secondAttribute="leading" id="JYB-7x-9ft"/>
+                            <constraint firstItem="ymb-RA-WaS" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="UjH-Tr-sLo"/>
+                            <constraint firstItem="6v3-Up-tO8" firstAttribute="top" secondItem="y0v-Ar-sto" secondAttribute="bottom" constant="13" id="Vjz-Z6-66e"/>
+                            <constraint firstItem="ymb-RA-WaS" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="73" id="X2B-AE-g5B"/>
+                            <constraint firstItem="y0v-Ar-sto" firstAttribute="top" secondItem="ymb-RA-WaS" secondAttribute="bottom" constant="13" id="g7b-nF-qw1"/>
+                            <constraint firstItem="6v3-Up-tO8" firstAttribute="leading" secondItem="y0v-Ar-sto" secondAttribute="leading" id="wuu-Mi-BKg"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="cameraContainerView" destination="pwm-J0-iWe" id="aob-kN-7M8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="249.5" y="340.5"/>
+        </scene>
+    </scenes>
+</document>
