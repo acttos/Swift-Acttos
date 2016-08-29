@@ -14,15 +14,9 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        @IBOutlet weak var cameraContainerView: UIView!
         // Do any additional setup after loading the view, typically from a nib.
-        @IBOutlet weak var cameraContainerView: UIView!
-        @IBOutlet weak var hello: UIView!
-        
 //        self._foregroundTimer();
 //        self._backgroundTimer(repeated: false);
-        @IBOutlet weak var cameraContainerView: UIView!
-        @IBOutlet weak var cameraContainerView: UIView!
 //        self._backgroundTimer(repeated: true);
 //        self._timerInGCD();
     }
@@ -50,8 +44,6 @@ class ViewController: UIViewController {
     
     @IBAction func repeatedGCDTimerAction(sender: AnyObject) {
         self._timerInGCD(repeated: true);
-        @IBAction func audioRequestAction(sender: AnyObject) {
-        }
     }
     
     func _foregroundTimer() -> Void {
@@ -59,8 +51,6 @@ class ViewController: UIViewController {
     }
     
     func _foregroundTimerAction(timer: NSTimer) -> Void {
-        @IBAction func startAction(sender: AnyObject) {
-        }
         NSLog("In '_foregroundTimerAction(_:)': The timer is fired.");
     }
     

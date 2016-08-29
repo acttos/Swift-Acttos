@@ -34,7 +34,7 @@
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pwm-J0-iWe">
                                 <rect key="frame" x="68" y="215" width="240" height="240"/>
-                                <color key="backgroundColor" red="0.18238589638157893" green="0.37435752467105265" blue="0.609375" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.18431372549019609" green="0.37254901960784315" blue="0.60784313725490191" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="240" id="RBt-X7-gaw"/>
                                     <constraint firstAttribute="width" constant="250" id="TFD-sO-1Ts"/>

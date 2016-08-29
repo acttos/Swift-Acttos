@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CollectionView" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q99-jY-J2U">
+                                <rect key="frame" x="152" y="319" width="73" height="30"/>
+                                <state key="normal" title="CLICK ME!"/>
+                                <connections>
+                                    <segue destination="eg4-iF-grW" kind="show" id="bjY-ma-8BG"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="q99-jY-J2U" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="E12-Hg-WpH"/>
+                            <constraint firstItem="q99-jY-J2U" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="FmF-Lg-wun"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+        <!--Collection View Controller-->
+        <scene sceneID="qZI-Kk-cjG">
+            <objects>
+                <viewController id="eg4-iF-grW" customClass="SACollectionViewController" customModule="CollectionView" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="fLC-vN-sxD"/>
+                        <viewControllerLayoutGuide type="bottom" id="jc1-tc-h0z"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="aAM-pf-hvV">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="m6p-4T-PR5">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="AQo-0e-Kkm">
+                                    <size key="itemSize" width="100" height="100"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="SACollectionViewCell" id="arC-GX-kZU" customClass="SACollectionViewCell" customModule="CollectionView" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="wechat" highlightedImage="wechat" translatesAutoresizingMaskIntoConstraints="NO" id="xyT-hc-Xcp">
+                                                    <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                                </imageView>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstItem="xyT-hc-Xcp" firstAttribute="leading" secondItem="arC-GX-kZU" secondAttribute="leading" id="0Tf-Tg-eC5"/>
+                                            <constraint firstAttribute="bottom" secondItem="xyT-hc-Xcp" secondAttribute="bottom" id="p1B-Ab-4jz"/>
+                                            <constraint firstItem="xyT-hc-Xcp" firstAttribute="top" secondItem="arC-GX-kZU" secondAttribute="top" id="rR0-1N-mC8"/>
+                                            <constraint firstAttribute="trailing" secondItem="xyT-hc-Xcp" secondAttribute="trailing" id="ryd-7f-9Jz"/>
+                                        </constraints>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="eg4-iF-grW" id="bi7-YM-3n0"/>
+                                    <outlet property="delegate" destination="eg4-iF-grW" id="qed-nA-SrY"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="m6p-4T-PR5" firstAttribute="leading" secondItem="aAM-pf-hvV" secondAttribute="leading" id="9ZW-i7-Bu8"/>
+                            <constraint firstAttribute="bottom" secondItem="m6p-4T-PR5" secondAttribute="bottom" id="PJJ-e0-EC7"/>
+                            <constraint firstAttribute="trailing" secondItem="m6p-4T-PR5" secondAttribute="trailing" id="bm1-uP-Ac0"/>
+                            <constraint firstItem="m6p-4T-PR5" firstAttribute="top" secondItem="aAM-pf-hvV" secondAttribute="top" id="cIn-X2-Gld"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="collectionView" destination="m6p-4T-PR5" id="oXk-wt-ubb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BWx-OO-mph" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="723.5" y="339.5"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="wechat" width="190" height="190"/>
+    </resources>
+</document>
