@@ -16,6 +16,9 @@ class SACollectionViewController: UIViewController, UICollectionViewDataSource, 
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+        //If you design your interface using 'Storyboard', make sure not to invoke this line below:
+//        self.collectionView.registerClass(SACollectionViewCell.self, forCellWithReuseIdentifier: "SACollectionViewCell");
     }
 
     override func didReceiveMemoryWarning() {
@@ -44,7 +47,7 @@ class SACollectionViewController: UIViewController, UICollectionViewDataSource, 
     }
 
     func  collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
-        var cell: SACollectionViewCell = collectionView.dequeueReusableCellWithReuseIdentifier("SACollectionViewCell", forIndexPath: indexPath) as! SACollectionViewCell;
+        let cell: SACollectionViewCell = collectionView.dequeueReusableCellWithReuseIdentifier("SACollectionViewCell", forIndexPath: indexPath) as! SACollectionViewCell;
         
         return cell;
     }
