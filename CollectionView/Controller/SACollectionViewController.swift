@@ -25,17 +25,6 @@ class SACollectionViewController: UIViewController, UICollectionViewDataSource, 
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
     //MARK: - Datasource Methods of CollectionViewController
     func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
@@ -50,5 +39,19 @@ class SACollectionViewController: UIViewController, UICollectionViewDataSource, 
         let cell: SACollectionViewCell = collectionView.dequeueReusableCellWithReuseIdentifier("SACollectionViewCell", forIndexPath: indexPath) as! SACollectionViewCell;
         
         return cell;
+    }
+    //MARK: - Delegate Methods of CollectionViewController
+    func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
+        NSLog("Cell @ \(indexPath) clicked...");
+    }
+    
+    func collectionView(collectionView: UICollectionView, didHighlightItemAtIndexPath indexPath: NSIndexPath) {
+        let cell: SACollectionViewCell = collectionView.cellForItemAtIndexPath(indexPath) as! SACollectionViewCell;
+        cell.frame = CGRectMake(cell.frame.origin.x, cell.frame.origin.y + 4, cell.frame.size.width, cell.frame.size.height);
+    }
+    
+    func collectionView(collectionView: UICollectionView, didUnhighlightItemAtIndexPath indexPath: NSIndexPath) {
+        let cell: SACollectionViewCell = collectionView.cellForItemAtIndexPath(indexPath) as! SACollectionViewCell;
+        cell.frame = CGRectMake(cell.frame.origin.x, cell.frame.origin.y - 4, cell.frame.size.width, cell.frame.size.height);
     }
 }
