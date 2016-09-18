@@ -20,19 +20,19 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         // Dispose of any resources that can be recreated.
     }
     //MARK: - DataSource Methods of UICollectionView
-    func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 3;
     }
     
-    func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 7;
     }
     
-    func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
-        let cell: CollectionViewCell = collectionView.dequeueReusableCellWithReuseIdentifier("CollectionViewCell", forIndexPath: indexPath) as! CollectionViewCell;
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell: CollectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: "CollectionViewCell", for: indexPath) as! CollectionViewCell;
         
-        if (indexPath.section % 2 == 0) {
-            cell.backgroundImageView.image = UIImage.init(data: NSData(contentsOfURL: NSURL(string: "https://avatars2.githubusercontent.com/u/6056509?v=3&s=460")!)!);
+        if ((indexPath as NSIndexPath).section % 2 == 0) {
+            cell.backgroundImageView.image = UIImage.init(data: try! Data(contentsOf: URL(string: "https://avatars2.githubusercontent.com/u/6056509?v=3&s=460")!));
         } else {
             cell.backgroundImageView.image = UIImage(named: "wechat.png");
         }
@@ -40,20 +40,20 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         return cell;
     }
     //MARK: - Delegate Methods of UICollectionView
-    func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
-        NSLog("The cell at section : \(indexPath.section), row : \(indexPath.row) has been clicked....");
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        NSLog("The cell at section : \((indexPath as NSIndexPath).section), row : \((indexPath as NSIndexPath).row) has been clicked....");
     }
     
-    func collectionView(collectionView: UICollectionView, didHighlightItemAtIndexPath indexPath: NSIndexPath) {
-        let cell: CollectionViewCell = collectionView.cellForItemAtIndexPath(indexPath) as! CollectionViewCell;
+    func collectionView(_ collectionView: UICollectionView, didHighlightItemAt indexPath: IndexPath) {
+        let cell: CollectionViewCell = collectionView.cellForItem(at: indexPath) as! CollectionViewCell;
         let frame: CGRect = cell.backgroundImageView.frame;
-        cell.backgroundImageView.frame = CGRectMake(frame.origin.x + 4, frame.origin.y + 4, frame.size.width - 8, frame.size.height - 8);
+        cell.backgroundImageView.frame = CGRect(x: frame.origin.x + 4, y: frame.origin.y + 4, width: frame.size.width - 8, height: frame.size.height - 8);
     }
     
-    func collectionView(collectionView: UICollectionView, didUnhighlightItemAtIndexPath indexPath: NSIndexPath) {
-        let cell: CollectionViewCell = collectionView.cellForItemAtIndexPath(indexPath) as! CollectionViewCell;
+    func collectionView(_ collectionView: UICollectionView, didUnhighlightItemAt indexPath: IndexPath) {
+        let cell: CollectionViewCell = collectionView.cellForItem(at: indexPath) as! CollectionViewCell;
         let frame: CGRect = cell.backgroundImageView.frame;
-        cell.backgroundImageView.frame = CGRectMake(frame.origin.x - 4, frame.origin.y - 4, frame.size.width + 8, frame.size.height + 8);
+        cell.backgroundImageView.frame = CGRect(x: frame.origin.x - 4, y: frame.origin.y - 4, width: frame.size.width + 8, height: frame.size.height + 8);
     }
 }
 
