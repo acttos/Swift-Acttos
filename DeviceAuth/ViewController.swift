@@ -12,9 +12,9 @@ import AVFoundation
 
 class ViewController: UIViewController, UIAlertViewDelegate {
 
-    typealias AuthorizeResultBlock = @convention(block) (succeed:Bool) -> Void;
+    typealias AuthorizeResultBlock = @convention(block) (_ succeed:Bool) -> Void;
     
-    var settingsItemURL: NSURL?;
+    var settingsItemURL: URL?;
     
     @IBOutlet weak var cameraContainerView: UIView!
     
@@ -28,7 +28,7 @@ class ViewController: UIViewController, UIAlertViewDelegate {
         // Dispose of any resources that can be recreated.
     }
 
-    @IBAction func audioRequestAction(sender: AnyObject) {
+    @IBAction func audioRequestAction(_ sender: AnyObject) {
         self._requestForMediaAuthorization(AVMediaTypeAudio, callback: { (result:Bool) in
             NSLog("result is:\(result)");
             if (!result) {
@@ -37,7 +37,7 @@ class ViewController: UIViewController, UIAlertViewDelegate {
         });
     }
     
-    @IBAction func videoRequestAction(sender: AnyObject) {
+    @IBAction func videoRequestAction(_ sender: AnyObject) {
         self._requestForMediaAuthorization(AVMediaTypeVideo, callback: { (result:Bool) in
             NSLog("result is:\(result)");
             if (!result) {
@@ -46,13 +46,13 @@ class ViewController: UIViewController, UIAlertViewDelegate {
         });
     }
     
-    @IBAction func startButtonAction(sender: AnyObject) {
+    @IBAction func startButtonAction(_ sender: AnyObject) {
         let captureSession:AVCaptureSession = AVCaptureSession();
         captureSession.sessionPreset = AVCaptureSessionPreset640x480;
-        let deviceList:[AVCaptureDevice] = AVCaptureDevice.devicesWithMediaType(AVMediaTypeVideo) as! [AVCaptureDevice];
+        let deviceList:[AVCaptureDevice] = AVCaptureDevice.devices(withMediaType: AVMediaTypeVideo) as! [AVCaptureDevice];
         var targetDevice:AVCaptureDevice? = nil;
         for device:AVCaptureDevice in deviceList {
-            if (device.position == AVCaptureDevicePosition.Front) {
+            if (device.position == AVCaptureDevicePosition.front) {
                 targetDevice = device;
                 break;
             }
@@ -64,7 +64,7 @@ class ViewController: UIViewController, UIAlertViewDelegate {
             captureSession.addInput(deviceInput);
             
             let previewLayer:AVCaptureVideoPreviewLayer = AVCaptureVideoPreviewLayer(session: captureSession);
-            previewLayer.backgroundColor = UIColor.whiteColor().CGColor;
+            previewLayer.backgroundColor = UIColor.white.cgColor;
             previewLayer.videoGravity = AVLayerVideoGravityResizeAspectFill;
             previewLayer.frame = self.cameraContainerView.bounds;
             self.cameraContainerView.layer.addSublayer(previewLayer);
@@ -75,24 +75,24 @@ class ViewController: UIViewController, UIAlertViewDelegate {
         }
     }
     
-    func _requestForMediaAuthorization(type: String, callback:AuthorizeResultBlock) -> Void {
-        AVCaptureDevice.requestAccessForMediaType(type) { (grant) in
+    func _requestForMediaAuthorization(_ type: String, callback:@escaping AuthorizeResultBlock) -> Void {
+        AVCaptureDevice.requestAccess(forMediaType: type) { (grant) in
             if (grant) {
                 NSLog("Authorize sucessfully with type:\(type)");
-                callback(succeed: true);
+                callback(true);
             } else {
                 NSLog("Failed to get authorization with type:\(type)");
-                callback(succeed: false);
+                callback(false);
             }
         }
     }
     
-    func _showAuthorizationFailureNotice(type: String) -> Void {
-        dispatch_async(dispatch_get_main_queue()) { 
+    func _showAuthorizationFailureNotice(_ type: String) -> Void {
+        DispatchQueue.main.async { 
             var tips: String?;
             let privacyItem: String = type == AVMediaTypeAudio ? "MICROPHONE" : type == AVMediaTypeVideo ? "CAMERA" : "";
             
-            self.settingsItemURL = NSURL(string: "prefs:root=Privacy&path=\(privacyItem)");
+            self.settingsItemURL = URL(string: "prefs:root=Privacy&path=\(privacyItem)");
             
             if (type == AVMediaTypeAudio) {
                 tips = "Please allow us to use your Microphone to capture audio by opening 'Settings -> Privacy -> Microphone' to grant.";
@@ -102,21 +102,21 @@ class ViewController: UIViewController, UIAlertViewDelegate {
                 tips = "Please allow us to use your device by opening 'Settings -> Privacy' to grant certain authorization.";
             }
             
-            let compareResult:NSComparisonResult = UIDevice.currentDevice().systemVersion.compare("8.0");
+            let compareResult:ComparisonResult = UIDevice.current.systemVersion.compare("8.0");
             
-            if (compareResult == NSComparisonResult.OrderedSame || compareResult == NSComparisonResult.OrderedDescending) {
-                let alertController: UIAlertController = UIAlertController(title: "Authorization Request", message: tips, preferredStyle: UIAlertControllerStyle.Alert);
-                let confirmAction: UIAlertAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: { (action) in
-                    if(UIApplication.sharedApplication().canOpenURL(self.settingsItemURL!)) {
-                        UIApplication.sharedApplication().openURL(self.settingsItemURL!);
+            if (compareResult == ComparisonResult.orderedSame || compareResult == ComparisonResult.orderedDescending) {
+                let alertController: UIAlertController = UIAlertController(title: "Authorization Request", message: tips, preferredStyle: UIAlertControllerStyle.alert);
+                let confirmAction: UIAlertAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: { (action) in
+                    if(UIApplication.shared.canOpenURL(self.settingsItemURL!)) {
+                        UIApplication.shared.openURL(self.settingsItemURL!);
                     }
                 });
                 
-                let cancelAction: UIAlertAction = UIAlertAction(title: "Cancel", style: UIAlertActionStyle.Cancel, handler: nil);
+                let cancelAction: UIAlertAction = UIAlertAction(title: "Cancel", style: UIAlertActionStyle.cancel, handler: nil);
                 
                 alertController.addAction(confirmAction);
                 alertController.addAction(cancelAction);
-                self.presentViewController(alertController, animated: true, completion: {
+                self.present(alertController, animated: true, completion: {
                     
                 });
             } else {
@@ -127,10 +127,10 @@ class ViewController: UIViewController, UIAlertViewDelegate {
     }
     
     //MARK: - UIAlertView Delegate Methods
-    func alertView(alertView: UIAlertView, clickedButtonAtIndex buttonIndex: Int) {
+    func alertView(_ alertView: UIAlertView, clickedButtonAt buttonIndex: Int) {
         if (buttonIndex == 1) {
-            if(UIApplication.sharedApplication().canOpenURL(settingsItemURL!)) {
-                UIApplication.sharedApplication().openURL(settingsItemURL!);
+            if(UIApplication.shared.canOpenURL(settingsItemURL!)) {
+                UIApplication.shared.openURL(settingsItemURL!);
             }
         }
     }

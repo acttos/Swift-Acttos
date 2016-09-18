@@ -31,11 +31,11 @@ class ViewController: UIViewController {
     }
     
     @IBAction func backgroundNSTimerAction(sender: AnyObject) {
-        self ._backgroundTimer(repeated: false);
+        self._backgroundTimer(repeated: false);
     }
     
     @IBAction func repeatedBackgroundNSTimerAction(sender: AnyObject) {
-        self ._backgroundTimer(repeated: true);
+        self._backgroundTimer(repeated: true);
     }
     
     @IBAction func gcdTimerAction(sender: AnyObject) {

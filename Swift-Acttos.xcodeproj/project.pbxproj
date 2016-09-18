@@ -211,6 +211,7 @@
 					7D31788E1D6BF468001F2AC0 = {
 						CreatedOnToolsVersion = 7.3.1;
 						DevelopmentTeam = AXTCK4AA86;
+						LastSwiftMigration = 0800;
 					};
 					7D4EE5801D7FBABD0076C67E = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -369,6 +370,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = cn.majinshou.acttos.DeviceAuth;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -380,6 +382,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = cn.majinshou.acttos.DeviceAuth;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
