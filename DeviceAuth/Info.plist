@@ -3,9 +3,9 @@
 <plist version="1.0">
 <dict>
 	<key>NSMicrophoneUsageDescription</key>
-	<string>Fuck you Microphone</string>
+	<string>Microphone Accquiring...</string>
 	<key>NSCameraUsageDescription</key>
-	<string></string>
+	<string> </string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleExecutable</key>

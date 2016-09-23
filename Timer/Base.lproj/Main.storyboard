@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -17,45 +19,59 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JcZ-cC-ADM">
-                                <rect key="frame" x="113" y="87" width="143" height="30"/>
-                                <state key="normal" title="Foreground NSTimer"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JcZ-cC-ADM">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Ar2-a1-kfL"/>
+                                </constraints>
+                                <state key="normal" title="Repeated Foreground NSTimer"/>
                                 <connections>
                                     <action selector="foregroundNSTimerAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jo1-aD-7tY"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q1L-nV-AOq">
-                                <rect key="frame" x="112" y="152" width="146" height="30"/>
-                                <state key="normal" title="Background NSTimer"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q1L-nV-AOq">
+                                <state key="normal" title="Unrepeated Background NSTimer"/>
                                 <connections>
                                     <action selector="backgroundNSTimerAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0OY-xX-U0k"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qcd-0H-fc1">
-                                <rect key="frame" x="77" y="211" width="216" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qcd-0H-fc1">
                                 <state key="normal" title="Repeated Background NSTimer"/>
                                 <connections>
                                     <action selector="repeatedBackgroundNSTimerAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yio-MC-tR8"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2lH-bF-sFT">
-                                <rect key="frame" x="149" y="276" width="76" height="30"/>
-                                <state key="normal" title="GCD Timer"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2lH-bF-sFT">
+                                <state key="normal" title="Unrepeated GCD Timer"/>
                                 <connections>
                                     <action selector="gcdTimerAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="j7I-tf-c7I"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pAp-QE-J27">
-                                <rect key="frame" x="114" y="318" width="145" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pAp-QE-J27">
                                 <state key="normal" title="Repeated GCD Timer"/>
                                 <connections>
                                     <action selector="repeatedGCDTimerAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="A8Y-2n-R68"/>
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="JcZ-cC-ADM" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="2rN-Ip-e4w"/>
+                            <constraint firstItem="Q1L-nV-AOq" firstAttribute="top" secondItem="JcZ-cC-ADM" secondAttribute="bottom" constant="35" id="AGB-iY-QvE"/>
+                            <constraint firstItem="2lH-bF-sFT" firstAttribute="centerX" secondItem="Qcd-0H-fc1" secondAttribute="centerX" id="As7-Bz-ouZ"/>
+                            <constraint firstItem="Qcd-0H-fc1" firstAttribute="width" secondItem="Q1L-nV-AOq" secondAttribute="width" id="LEW-na-DM8"/>
+                            <constraint firstItem="JcZ-cC-ADM" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="87" id="LWA-w9-kzt"/>
+                            <constraint firstItem="pAp-QE-J27" firstAttribute="width" secondItem="2lH-bF-sFT" secondAttribute="width" id="QQ7-D3-3bN"/>
+                            <constraint firstItem="pAp-QE-J27" firstAttribute="centerX" secondItem="2lH-bF-sFT" secondAttribute="centerX" id="TY2-uK-PSW"/>
+                            <constraint firstItem="JcZ-cC-ADM" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Zs2-Ab-QcT"/>
+                            <constraint firstItem="Q1L-nV-AOq" firstAttribute="width" secondItem="JcZ-cC-ADM" secondAttribute="width" id="l2v-8M-EsZ"/>
+                            <constraint firstItem="2lH-bF-sFT" firstAttribute="top" secondItem="Qcd-0H-fc1" secondAttribute="bottom" constant="35" id="lAa-hb-rfj"/>
+                            <constraint firstItem="Q1L-nV-AOq" firstAttribute="centerX" secondItem="JcZ-cC-ADM" secondAttribute="centerX" id="nqf-tE-rs5"/>
+                            <constraint firstItem="2lH-bF-sFT" firstAttribute="width" secondItem="Qcd-0H-fc1" secondAttribute="width" id="ogi-pC-l7y"/>
+                            <constraint firstItem="Qcd-0H-fc1" firstAttribute="centerX" secondItem="Q1L-nV-AOq" secondAttribute="centerX" id="std-fu-Z68"/>
+                            <constraint firstItem="pAp-QE-J27" firstAttribute="top" secondItem="2lH-bF-sFT" secondAttribute="bottom" constant="35" id="tcV-04-LR7"/>
+                            <constraint firstItem="Qcd-0H-fc1" firstAttribute="top" secondItem="Q1L-nV-AOq" secondAttribute="bottom" constant="35" id="z37-qI-pxi"/>
+                        </constraints>
                     </view>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

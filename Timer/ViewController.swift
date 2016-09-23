@@ -9,8 +9,8 @@
 import UIKit
 
 class ViewController: UIViewController {
-    let queue: dispatch_queue_t? = dispatch_queue_create("GCDTimerQueue", DISPATCH_QUEUE_CONCURRENT);
-    var timer: dispatch_source_t? = nil;// = dispatch_source_create(DISPATCH_SOURCE_TYPE_TIMER, 0, 0, queue);
+    let queue: DispatchQueue? = DispatchQueue(label: "GCDTimerQueue", attributes: DispatchQueue.Attributes.concurrent);
+    var timer: DispatchSourceTimer? = nil;
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,48 +26,48 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func foregroundNSTimerAction(sender: AnyObject) {
+    @IBAction func foregroundNSTimerAction(_ sender: AnyObject) {
         self._foregroundTimer();
     }
     
-    @IBAction func backgroundNSTimerAction(sender: AnyObject) {
+    @IBAction func backgroundNSTimerAction(_ sender: AnyObject) {
         self._backgroundTimer(repeated: false);
     }
     
-    @IBAction func repeatedBackgroundNSTimerAction(sender: AnyObject) {
+    @IBAction func repeatedBackgroundNSTimerAction(_ sender: AnyObject) {
         self._backgroundTimer(repeated: true);
     }
     
-    @IBAction func gcdTimerAction(sender: AnyObject) {
+    @IBAction func gcdTimerAction(_ sender: AnyObject) {
         self._timerInGCD(repeated: false);
     }
     
-    @IBAction func repeatedGCDTimerAction(sender: AnyObject) {
+    @IBAction func repeatedGCDTimerAction(_ sender: AnyObject) {
         self._timerInGCD(repeated: true);
     }
     
     func _foregroundTimer() -> Void {
-        NSTimer.scheduledTimerWithTimeInterval(3, target: self, selector: #selector(self._foregroundTimerAction(_:)), userInfo: nil, repeats: true);
+        Foundation.Timer.scheduledTimer(timeInterval: 3, target: self, selector: #selector(self._foregroundTimerAction(_:)), userInfo: nil, repeats: true);
     }
     
-    func _foregroundTimerAction(timer: NSTimer) -> Void {
+    func _foregroundTimerAction(_ timer: Foundation.Timer) -> Void {
         NSLog("In '_foregroundTimerAction(_:)': The timer is fired.");
     }
     
-    func _backgroundTimer(repeated repeated: Bool) -> Void {
+    func _backgroundTimer(repeated: Bool) -> Void {
         NSLog("_backgroundTimer invoked.");
         /**
          *  The thread I used is a background thread, dispatch_async will set up a background thread to execute the code in the block.
          */
-        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0)) {
+        DispatchQueue.global(qos:.userInitiated).async{
             NSLog("NSTimer will be scheduled...");
             
             //Define a NSTimer
-            let timer:NSTimer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: #selector(self._backgroundTimerAction(_:)), userInfo: nil, repeats: repeated);
+            let timer:Foundation.Timer = Foundation.Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(self._backgroundTimerAction(_:)), userInfo: nil, repeats: repeated);
             //Get the current RunLoop
-            let runLoop:NSRunLoop = NSRunLoop.currentRunLoop();
+            let runLoop:RunLoop = RunLoop.current;
             //Add the timer to the RunLoop
-            runLoop.addTimer(timer, forMode: NSDefaultRunLoopMode);
+            runLoop.add(timer, forMode: RunLoopMode.defaultRunLoopMode);
             //Invoke the run method of RunLoop manually
             runLoop.run();
             NSLog("NSTimer scheduled...");
@@ -75,51 +75,51 @@ class ViewController: UIViewController {
         
     }
     
-    func _backgroundTimerAction(timer: NSTimer) -> Void {
+    func _backgroundTimerAction(_ timer: Foundation.Timer) -> Void {
         NSLog("In '_backgroundTimerAction(_:)': The timer is fired.");
     }
     
-    func _timerInGCD(repeated repeated:Bool) -> Void {
+    func _timerInGCD(repeated:Bool) -> Void {
         NSLog("_timerInGCD invoked.");
         if (self.timer != nil) {
-            dispatch_source_cancel(self.timer!);
+            self.timer!.cancel();
         }
-        timer = dispatch_source_create(DISPATCH_SOURCE_TYPE_TIMER, 0, 0, queue);
-        dispatch_source_set_timer(timer!, DISPATCH_TIME_NOW, 1 * NSEC_PER_SEC, 0);
+        self.timer = DispatchSource.makeTimerSource(flags: DispatchSource.TimerFlags(rawValue: UInt(0)), queue: queue);
+        self.timer?.scheduleRepeating(deadline: .now(), interval: .seconds(1) ,leeway:.milliseconds(0));
         
-        dispatch_source_set_event_handler(timer!, { () -> Void in
+        self.timer!.setEventHandler(handler: { () -> Void in
             NSLog("In GCD Timer, block is invoked ...");
             
             if(!repeated) {
-                dispatch_source_cancel(self.timer!);
+                self.timer!.cancel();
                 NSLog("The timer is canceled.");
             }
         });
         
         NSLog("timer will be resumed.");
-        dispatch_resume(timer!);
+        self.timer!.resume();
     }
     
-    typealias GCDTimerBlock = @convention(block) (userInfo:AnyObject?) -> Void
+    typealias GCDTimerBlock = @convention(block) (_ userInfo:AnyObject?) -> Void
     
-    func scheduledTimerWithTimeInterval(ti: UInt64, block:GCDTimerBlock, repeats yesOrNo: Bool) -> Void {
+    func scheduledTimerWithTimeInterval(_ ti: Int, block:GCDTimerBlock, repeats yesOrNo: Bool) -> Void {
         if (self.timer != nil) {
-            dispatch_source_cancel(self.timer!);
+            self.timer!.cancel();
         }
-        timer = dispatch_source_create(DISPATCH_SOURCE_TYPE_TIMER, 0, 0, queue);
-        dispatch_source_set_timer(timer!, DISPATCH_TIME_NOW, ti * NSEC_PER_SEC, 0);
+        self.timer = DispatchSource.makeTimerSource(flags: DispatchSource.TimerFlags(rawValue: UInt(0)), queue: queue);
+        self.timer?.scheduleRepeating(deadline: .now(), interval: DispatchTimeInterval.seconds(ti) ,leeway:.milliseconds(0));
         
-        dispatch_source_set_event_handler(timer!, { () -> Void in
+        self.timer!.setEventHandler(handler: { () -> Void in
             NSLog("In GCD Timer, block is invoked ...");
             
             if(!yesOrNo) {
-                dispatch_source_cancel(self.timer!);
+                self.timer!.cancel();
                 NSLog("The timer is canceled.");
             }
         });
         
         NSLog("timer will be resumed.");
-        dispatch_resume(timer!);
+        timer!.resume();
     }
 }
 
