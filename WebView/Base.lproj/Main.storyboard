@@ -4,6 +4,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -16,26 +17,54 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dSI-Wn-KGX">
                                 <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </webView>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jQI-y0-p0w">
-                                <frame key="frameInset" minX="120" minY="11" width="97" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jvk-Pa-fH4" userLabel="Bottom Container View">
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zgU-hO-h6n" userLabel="Back Button">
+                                        <state key="normal" image="back.png"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AtS-pK-MAr" userLabel="Forward Button">
+                                        <state key="normal" image="forward.png"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S1v-pP-FGr" userLabel="Refresh Button">
+                                        <state key="normal" image="refresh.png"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VRc-iu-hT7" userLabel="Share Button">
+                                        <state key="normal" image="share.png"/>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.93333333333333335" green="0.93333333333333335" blue="0.93333333333333335" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="VRc-iu-hT7" firstAttribute="centerX" secondItem="Jvk-Pa-fH4" secondAttribute="centerX" multiplier="1.75" id="1wg-El-eUV"/>
+                                    <constraint firstItem="zgU-hO-h6n" firstAttribute="width" secondItem="Jvk-Pa-fH4" secondAttribute="width" multiplier="0.25" id="7cS-eY-Yfk"/>
+                                    <constraint firstItem="AtS-pK-MAr" firstAttribute="width" secondItem="Jvk-Pa-fH4" secondAttribute="width" multiplier="0.25" id="Bo1-EO-iNZ"/>
+                                    <constraint firstItem="S1v-pP-FGr" firstAttribute="centerY" secondItem="Jvk-Pa-fH4" secondAttribute="centerY" id="C3K-zN-Ab5"/>
+                                    <constraint firstItem="zgU-hO-h6n" firstAttribute="centerX" secondItem="Jvk-Pa-fH4" secondAttribute="centerX" multiplier="0.25" id="Iwc-bs-jr4"/>
+                                    <constraint firstAttribute="height" constant="50" id="JnA-E1-aB9"/>
+                                    <constraint firstItem="S1v-pP-FGr" firstAttribute="width" secondItem="Jvk-Pa-fH4" secondAttribute="width" multiplier="0.25" id="OaT-mK-dh2"/>
+                                    <constraint firstItem="AtS-pK-MAr" firstAttribute="centerX" secondItem="Jvk-Pa-fH4" secondAttribute="centerX" multiplier="0.75" id="Tye-b4-Ls5"/>
+                                    <constraint firstItem="VRc-iu-hT7" firstAttribute="width" secondItem="Jvk-Pa-fH4" secondAttribute="width" multiplier="0.25" id="Wk1-6H-nxa"/>
+                                    <constraint firstItem="VRc-iu-hT7" firstAttribute="centerY" secondItem="Jvk-Pa-fH4" secondAttribute="centerY" id="atW-C1-bYJ"/>
+                                    <constraint firstItem="AtS-pK-MAr" firstAttribute="centerY" secondItem="Jvk-Pa-fH4" secondAttribute="centerY" id="bpM-l5-Lcv"/>
+                                    <constraint firstItem="zgU-hO-h6n" firstAttribute="centerY" secondItem="Jvk-Pa-fH4" secondAttribute="centerY" id="fPX-a7-lFj"/>
+                                    <constraint firstItem="S1v-pP-FGr" firstAttribute="centerX" secondItem="Jvk-Pa-fH4" secondAttribute="centerX" multiplier="1.25" id="g7n-LO-sBn"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="dSI-Wn-KGX" secondAttribute="trailing" id="037-ue-I0P"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="Jvk-Pa-fH4" secondAttribute="bottom" id="3Em-V2-BZB"/>
                             <constraint firstItem="dSI-Wn-KGX" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="CzS-zK-Yeh"/>
+                            <constraint firstAttribute="trailing" secondItem="Jvk-Pa-fH4" secondAttribute="trailing" id="Hxs-S9-k7C"/>
                             <constraint firstAttribute="bottomMargin" secondItem="dSI-Wn-KGX" secondAttribute="bottom" id="UFC-QO-3Qy"/>
                             <constraint firstItem="dSI-Wn-KGX" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="bEf-KF-wUX"/>
+                            <constraint firstItem="Jvk-Pa-fH4" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="oJN-qy-OGv"/>
                         </constraints>
                     </view>
                     <connections>
@@ -46,4 +75,10 @@
             </objects>
         </scene>
     </scenes>
+    <resources>
+        <image name="back.png" width="12" height="23"/>
+        <image name="forward.png" width="13" height="24"/>
+        <image name="refresh.png" width="24" height="24"/>
+        <image name="share.png" width="24" height="24"/>
+    </resources>
 </document>
