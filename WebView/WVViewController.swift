@@ -11,6 +11,11 @@ import UIKit
 class WVViewController: UIViewController {
 
     @IBOutlet weak var webView: UIWebView!;
+    @IBOutlet weak var backButton: UIButton!;
+    @IBOutlet weak var forwardButton: UIButton!;
+    @IBOutlet weak var refreshButton: UIButton!;
+    @IBOutlet weak var shareButton: UIButton!;
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()

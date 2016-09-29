@@ -17,7 +17,7 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dSI-Wn-KGX">
@@ -68,6 +68,10 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="backButton" destination="zgU-hO-h6n" id="R0Y-fP-zDa"/>
+                        <outlet property="forwardButton" destination="AtS-pK-MAr" id="kOr-GW-6My"/>
+                        <outlet property="refreshButton" destination="S1v-pP-FGr" id="h7g-QS-NPU"/>
+                        <outlet property="shareButton" destination="VRc-iu-hT7" id="dZ0-Xr-Ncq"/>
                         <outlet property="webView" destination="dSI-Wn-KGX" id="qP6-oW-6nJ"/>
                     </connections>
                 </viewController>
