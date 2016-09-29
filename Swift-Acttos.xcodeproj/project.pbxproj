@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7D24A59D1D9A58DA0057B2FC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D24A59C1D9A58DA0057B2FC /* AppDelegate.swift */; };
+		7D24A59F1D9A58DA0057B2FC /* WVViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D24A59E1D9A58DA0057B2FC /* WVViewController.swift */; };
+		7D24A5A21D9A58DA0057B2FC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D24A5A01D9A58DA0057B2FC /* Main.storyboard */; };
+		7D24A5A41D9A58DA0057B2FC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7D24A5A31D9A58DA0057B2FC /* Assets.xcassets */; };
+		7D24A5A71D9A58DA0057B2FC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D24A5A51D9A58DA0057B2FC /* LaunchScreen.storyboard */; };
 		7D3178921D6BF468001F2AC0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D3178911D6BF468001F2AC0 /* AppDelegate.swift */; };
 		7D3178941D6BF468001F2AC0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D3178931D6BF468001F2AC0 /* ViewController.swift */; };
 		7D3178971D6BF468001F2AC0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D3178951D6BF468001F2AC0 /* Main.storyboard */; };
@@ -29,6 +34,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7D24A59A1D9A58D90057B2FC /* WebView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WebView.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7D24A59C1D9A58DA0057B2FC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		7D24A59E1D9A58DA0057B2FC /* WVViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WVViewController.swift; sourceTree = "<group>"; };
+		7D24A5A11D9A58DA0057B2FC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		7D24A5A31D9A58DA0057B2FC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		7D24A5A61D9A58DA0057B2FC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		7D24A5A81D9A58DA0057B2FC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7D3178911D6BF468001F2AC0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7D3178931D6BF468001F2AC0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		7D3178961D6BF468001F2AC0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -57,6 +69,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		7D24A5971D9A58D90057B2FC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		7D31788C1D6BF468001F2AC0 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -81,6 +100,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7D24A59B1D9A58DA0057B2FC /* WebView */ = {
+			isa = PBXGroup;
+			children = (
+				7D24A59C1D9A58DA0057B2FC /* AppDelegate.swift */,
+				7D24A59E1D9A58DA0057B2FC /* WVViewController.swift */,
+				7D24A5A01D9A58DA0057B2FC /* Main.storyboard */,
+				7D24A5A31D9A58DA0057B2FC /* Assets.xcassets */,
+				7D24A5A51D9A58DA0057B2FC /* LaunchScreen.storyboard */,
+				7D24A5A81D9A58DA0057B2FC /* Info.plist */,
+			);
+			path = WebView;
+			sourceTree = "<group>";
+		};
 		7D3178901D6BF468001F2AC0 /* DeviceAuth */ = {
 			isa = PBXGroup;
 			children = (
@@ -123,10 +155,12 @@
 			children = (
 				7DDC60CA1D65D86500AE30D2 /* Timer */,
 				7D3178901D6BF468001F2AC0 /* DeviceAuth */,
+				7D4EE5821D7FBABD0076C67E /* CollectionView */,
+				7D24A59B1D9A58DA0057B2FC /* WebView */,
 				7D3178A31D6C2103001F2AC0 /* Timer.app */,
 				7D3178A41D6C2103001F2AC0 /* DeviceAuth.app */,
 				7D4EE5811D7FBABD0076C67E /* CollectionView.app */,
-				7D4EE5821D7FBABD0076C67E /* CollectionView */,
+				7D24A59A1D9A58D90057B2FC /* WebView.app */,
 			);
 			sourceTree = "<group>";
 		};
@@ -147,6 +181,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		7D24A5991D9A58D90057B2FC /* WebView */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7D24A5AB1D9A58DA0057B2FC /* Build configuration list for PBXNativeTarget "WebView" */;
+			buildPhases = (
+				7D24A5961D9A58D90057B2FC /* Sources */,
+				7D24A5971D9A58D90057B2FC /* Frameworks */,
+				7D24A5981D9A58D90057B2FC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = WebView;
+			productName = WebView;
+			productReference = 7D24A59A1D9A58D90057B2FC /* WebView.app */;
+			productType = "com.apple.product-type.application";
+		};
 		7D31788E1D6BF468001F2AC0 /* DeviceAuth */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7D31789E1D6BF468001F2AC0 /* Build configuration list for PBXNativeTarget "DeviceAuth" */;
@@ -204,10 +255,15 @@
 		7DC7940E1D5C67FF007E352C /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0730;
+				LastSwiftUpdateCheck = 0800;
 				LastUpgradeCheck = 0730;
 				ORGANIZATIONNAME = Acttos.org;
 				TargetAttributes = {
+					7D24A5991D9A58D90057B2FC = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = AXTCK4AA86;
+						ProvisioningStyle = Automatic;
+					};
 					7D31788E1D6BF468001F2AC0 = {
 						CreatedOnToolsVersion = 7.3.1;
 						DevelopmentTeam = AXTCK4AA86;
@@ -241,11 +297,22 @@
 				7DDC60C81D65D86400AE30D2 /* Timer */,
 				7D31788E1D6BF468001F2AC0 /* DeviceAuth */,
 				7D4EE5801D7FBABD0076C67E /* CollectionView */,
+				7D24A5991D9A58D90057B2FC /* WebView */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		7D24A5981D9A58D90057B2FC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7D24A5A71D9A58DA0057B2FC /* LaunchScreen.storyboard in Resources */,
+				7D24A5A41D9A58DA0057B2FC /* Assets.xcassets in Resources */,
+				7D24A5A21D9A58DA0057B2FC /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		7D31788D1D6BF468001F2AC0 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -281,6 +348,15 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		7D24A5961D9A58D90057B2FC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7D24A59F1D9A58DA0057B2FC /* WVViewController.swift in Sources */,
+				7D24A59D1D9A58DA0057B2FC /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		7D31788B1D6BF468001F2AC0 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -313,6 +389,22 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		7D24A5A01D9A58DA0057B2FC /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7D24A5A11D9A58DA0057B2FC /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		7D24A5A51D9A58DA0057B2FC /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7D24A5A61D9A58DA0057B2FC /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
 		7D3178951D6BF468001F2AC0 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -364,6 +456,42 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		7D24A5A91D9A58DA0057B2FC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				DEVELOPMENT_TEAM = AXTCK4AA86;
+				INFOPLIST_FILE = WebView/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = cn.majinshou.acttos.WebView;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		7D24A5AA1D9A58DA0057B2FC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				DEVELOPMENT_TEAM = AXTCK4AA86;
+				INFOPLIST_FILE = WebView/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = cn.majinshou.acttos.WebView;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
 		7D31789F1D6BF468001F2AC0 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -522,6 +650,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		7D24A5AB1D9A58DA0057B2FC /* Build configuration list for PBXNativeTarget "WebView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7D24A5A91D9A58DA0057B2FC /* Debug */,
+				7D24A5AA1D9A58DA0057B2FC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		7D31789E1D6BF468001F2AC0 /* Build configuration list for PBXNativeTarget "DeviceAuth" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
