@@ -27,15 +27,27 @@
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zgU-hO-h6n" userLabel="Back Button">
                                         <state key="normal" image="back.png"/>
+                                        <connections>
+                                            <action selector="backButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7Jh-ik-enx"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AtS-pK-MAr" userLabel="Forward Button">
                                         <state key="normal" image="forward.png"/>
+                                        <connections>
+                                            <action selector="forwardButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cSD-X9-2lz"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S1v-pP-FGr" userLabel="Refresh Button">
                                         <state key="normal" image="refresh.png"/>
+                                        <connections>
+                                            <action selector="refreshButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YVn-4r-lkE"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VRc-iu-hT7" userLabel="Share Button">
                                         <state key="normal" image="share.png"/>
+                                        <connections>
+                                            <action selector="shareButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="O7d-ab-p1G"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.93333333333333335" green="0.93333333333333335" blue="0.93333333333333335" alpha="1" colorSpace="calibratedRGB"/>
@@ -72,6 +84,7 @@
                         <outlet property="forwardButton" destination="AtS-pK-MAr" id="kOr-GW-6My"/>
                         <outlet property="refreshButton" destination="S1v-pP-FGr" id="h7g-QS-NPU"/>
                         <outlet property="shareButton" destination="VRc-iu-hT7" id="dZ0-Xr-Ncq"/>
+                        <outlet property="shareButtonAction" destination="VRc-iu-hT7" id="3ma-Fj-VzX"/>
                         <outlet property="webView" destination="dSI-Wn-KGX" id="qP6-oW-6nJ"/>
                     </connections>
                 </viewController>
