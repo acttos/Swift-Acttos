@@ -3,7 +3,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -71,10 +70,10 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="dSI-Wn-KGX" secondAttribute="trailing" id="037-ue-I0P"/>
-                            <constraint firstAttribute="bottomMargin" secondItem="Jvk-Pa-fH4" secondAttribute="bottom" id="3Em-V2-BZB"/>
-                            <constraint firstItem="dSI-Wn-KGX" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="CzS-zK-Yeh"/>
+                            <constraint firstAttribute="bottom" secondItem="Jvk-Pa-fH4" secondAttribute="bottom" id="3Em-V2-BZB"/>
+                            <constraint firstItem="dSI-Wn-KGX" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="20" id="CzS-zK-Yeh"/>
                             <constraint firstAttribute="trailing" secondItem="Jvk-Pa-fH4" secondAttribute="trailing" id="Hxs-S9-k7C"/>
-                            <constraint firstAttribute="bottomMargin" secondItem="dSI-Wn-KGX" secondAttribute="bottom" id="UFC-QO-3Qy"/>
+                            <constraint firstAttribute="bottom" secondItem="dSI-Wn-KGX" secondAttribute="bottom" id="UFC-QO-3Qy"/>
                             <constraint firstItem="dSI-Wn-KGX" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="bEf-KF-wUX"/>
                             <constraint firstItem="Jvk-Pa-fH4" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="oJN-qy-OGv"/>
                         </constraints>
@@ -83,8 +82,7 @@
                         <outlet property="backButton" destination="zgU-hO-h6n" id="R0Y-fP-zDa"/>
                         <outlet property="forwardButton" destination="AtS-pK-MAr" id="kOr-GW-6My"/>
                         <outlet property="refreshButton" destination="S1v-pP-FGr" id="h7g-QS-NPU"/>
-                        <outlet property="shareButton" destination="VRc-iu-hT7" id="dZ0-Xr-Ncq"/>
-                        <outlet property="shareButtonAction" destination="VRc-iu-hT7" id="3ma-Fj-VzX"/>
+                        <outlet property="shareButton" destination="VRc-iu-hT7" id="5Sn-1w-OTS"/>
                         <outlet property="webView" destination="dSI-Wn-KGX" id="qP6-oW-6nJ"/>
                     </connections>
                 </viewController>

@@ -9,7 +9,9 @@
 import UIKit
 
 class WVViewController: UIViewController, UIWebViewDelegate {
-
+    var pageTitle:String = "Original title";
+    var pageHref:String = "Original href";
+    
     @IBOutlet weak var webView: UIWebView!;
     @IBOutlet weak var backButton: UIButton!;
     @IBOutlet weak var forwardButton: UIButton!;
@@ -20,6 +22,11 @@ class WVViewController: UIViewController, UIWebViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        let webViewURL:URL = URL(string: "https://github.com/acttos/")!;
+        let request:URLRequest = URLRequest(url: webViewURL, cachePolicy: URLRequest.CachePolicy.returnCacheDataElseLoad, timeoutInterval: 10);
+        self.webView.delegate = self;
+        
+        self.webView.loadRequest(request);
     }
 
     override func didReceiveMemoryWarning() {
@@ -32,6 +39,8 @@ class WVViewController: UIViewController, UIWebViewDelegate {
     }
  
     func webViewDidFinishLoad(_ webView: UIWebView) {
+        self.pageTitle = self.webView.stringByEvaluatingJavaScript(from: "document.title")!;
+        self.pageHref = self.webView.stringByEvaluatingJavaScript(from: "window.location.href")!;
         
     }
     
@@ -60,7 +69,7 @@ class WVViewController: UIViewController, UIWebViewDelegate {
     }
     
     @IBAction func shareButtonAction(_ sender: AnyObject) {
-        let activityController:UIActivityViewController = UIActivityViewController(activityItems: [], applicationActivities: []);
+        let activityController:UIActivityViewController = UIActivityViewController(activityItems: [self.pageTitle,self.pageHref], applicationActivities: []);
         self.present(activityController, animated: true) { 
             print("Share Button Clicked.")
         }
