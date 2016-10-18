@@ -25,6 +25,11 @@
 		7D4EE5891D7FBABE0076C67E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D4EE5871D7FBABE0076C67E /* Main.storyboard */; };
 		7D4EE58B1D7FBABE0076C67E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7D4EE58A1D7FBABE0076C67E /* Assets.xcassets */; };
 		7D4EE58E1D7FBABE0076C67E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D4EE58C1D7FBABE0076C67E /* LaunchScreen.storyboard */; };
+		7D501FD61DAB3301002DF41B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D501FD51DAB3301002DF41B /* AppDelegate.swift */; };
+		7D501FD81DAB3301002DF41B /* FTViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D501FD71DAB3301002DF41B /* FTViewController.swift */; };
+		7D501FDB1DAB3301002DF41B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D501FD91DAB3301002DF41B /* Main.storyboard */; };
+		7D501FDD1DAB3301002DF41B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7D501FDC1DAB3301002DF41B /* Assets.xcassets */; };
+		7D501FE01DAB3301002DF41B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D501FDE1DAB3301002DF41B /* LaunchScreen.storyboard */; };
 		7DAB313B1D9D09D200D99649 /* back@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7DAB31331D9D09D200D99649 /* back@2x.png */; };
 		7DAB313C1D9D09D200D99649 /* back@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7DAB31341D9D09D200D99649 /* back@3x.png */; };
 		7DAB313D1D9D09D200D99649 /* forward@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7DAB31351D9D09D200D99649 /* forward@2x.png */; };
@@ -67,6 +72,13 @@
 		7D4EE58A1D7FBABE0076C67E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7D4EE58D1D7FBABE0076C67E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7D4EE58F1D7FBABE0076C67E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7D501FD31DAB3301002DF41B /* FoldawayTableView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoldawayTableView.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7D501FD51DAB3301002DF41B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		7D501FD71DAB3301002DF41B /* FTViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FTViewController.swift; sourceTree = "<group>"; };
+		7D501FDA1DAB3301002DF41B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		7D501FDC1DAB3301002DF41B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		7D501FDF1DAB3301002DF41B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		7D501FE11DAB3301002DF41B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7DAB31331D9D09D200D99649 /* back@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "back@2x.png"; sourceTree = "<group>"; };
 		7DAB31341D9D09D200D99649 /* back@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "back@3x.png"; sourceTree = "<group>"; };
 		7DAB31351D9D09D200D99649 /* forward@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "forward@2x.png"; sourceTree = "<group>"; };
@@ -100,6 +112,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		7D4EE57E1D7FBABD0076C67E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7D501FD01DAB3301002DF41B /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -167,6 +186,19 @@
 			path = CollectionView;
 			sourceTree = "<group>";
 		};
+		7D501FD41DAB3301002DF41B /* FoldawayTableView */ = {
+			isa = PBXGroup;
+			children = (
+				7D501FD51DAB3301002DF41B /* AppDelegate.swift */,
+				7D501FD71DAB3301002DF41B /* FTViewController.swift */,
+				7D501FD91DAB3301002DF41B /* Main.storyboard */,
+				7D501FDC1DAB3301002DF41B /* Assets.xcassets */,
+				7D501FDE1DAB3301002DF41B /* LaunchScreen.storyboard */,
+				7D501FE11DAB3301002DF41B /* Info.plist */,
+			);
+			path = FoldawayTableView;
+			sourceTree = "<group>";
+		};
 		7DAB31321D9D09D200D99649 /* Images */ = {
 			isa = PBXGroup;
 			children = (
@@ -189,10 +221,12 @@
 				7D3178901D6BF468001F2AC0 /* DeviceAuth */,
 				7D4EE5821D7FBABD0076C67E /* CollectionView */,
 				7D24A59B1D9A58DA0057B2FC /* WebView */,
+				7D501FD41DAB3301002DF41B /* FoldawayTableView */,
 				7D3178A31D6C2103001F2AC0 /* Timer.app */,
 				7D3178A41D6C2103001F2AC0 /* DeviceAuth.app */,
 				7D4EE5811D7FBABD0076C67E /* CollectionView.app */,
 				7D24A59A1D9A58D90057B2FC /* WebView.app */,
+				7D501FD31DAB3301002DF41B /* FoldawayTableView.app */,
 			);
 			sourceTree = "<group>";
 		};
@@ -264,6 +298,23 @@
 			productReference = 7D4EE5811D7FBABD0076C67E /* CollectionView.app */;
 			productType = "com.apple.product-type.application";
 		};
+		7D501FD21DAB3301002DF41B /* FoldawayTableView */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7D501FE41DAB3301002DF41B /* Build configuration list for PBXNativeTarget "FoldawayTableView" */;
+			buildPhases = (
+				7D501FCF1DAB3301002DF41B /* Sources */,
+				7D501FD01DAB3301002DF41B /* Frameworks */,
+				7D501FD11DAB3301002DF41B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FoldawayTableView;
+			productName = FoldawayTableView;
+			productReference = 7D501FD31DAB3301002DF41B /* FoldawayTableView.app */;
+			productType = "com.apple.product-type.application";
+		};
 		7DDC60C81D65D86400AE30D2 /* Timer */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7DDC60F41D65D86500AE30D2 /* Build configuration list for PBXNativeTarget "Timer" */;
@@ -306,6 +357,11 @@
 						DevelopmentTeam = AXTCK4AA86;
 						LastSwiftMigration = 0800;
 					};
+					7D501FD21DAB3301002DF41B = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = AXTCK4AA86;
+						ProvisioningStyle = Automatic;
+					};
 					7DDC60C81D65D86400AE30D2 = {
 						CreatedOnToolsVersion = 7.3.1;
 						DevelopmentTeam = AXTCK4AA86;
@@ -330,6 +386,7 @@
 				7D31788E1D6BF468001F2AC0 /* DeviceAuth */,
 				7D4EE5801D7FBABD0076C67E /* CollectionView */,
 				7D24A5991D9A58D90057B2FC /* WebView */,
+				7D501FD21DAB3301002DF41B /* FoldawayTableView */,
 			);
 		};
 /* End PBXProject section */
@@ -375,6 +432,16 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		7D501FD11DAB3301002DF41B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7D501FE01DAB3301002DF41B /* LaunchScreen.storyboard in Resources */,
+				7D501FDD1DAB3301002DF41B /* Assets.xcassets in Resources */,
+				7D501FDB1DAB3301002DF41B /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		7DDC60C71D65D86400AE30D2 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -413,6 +480,15 @@
 				7D4EE5861D7FBABE0076C67E /* ViewController.swift in Sources */,
 				7D4EE5841D7FBABE0076C67E /* AppDelegate.swift in Sources */,
 				7DC982991D8149F6000655B4 /* CollectionViewCell.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7D501FCF1DAB3301002DF41B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7D501FD81DAB3301002DF41B /* FTViewController.swift in Sources */,
+				7D501FD61DAB3301002DF41B /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -473,6 +549,22 @@
 			isa = PBXVariantGroup;
 			children = (
 				7D4EE58D1D7FBABE0076C67E /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		7D501FD91DAB3301002DF41B /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7D501FDA1DAB3301002DF41B /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		7D501FDE1DAB3301002DF41B /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7D501FDF1DAB3301002DF41B /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -576,6 +668,42 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = cn.majinshou.acttos.CollectionView;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		7D501FE21DAB3301002DF41B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				DEVELOPMENT_TEAM = AXTCK4AA86;
+				INFOPLIST_FILE = FoldawayTableView/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = cn.majinshou.acttos.FoldawayTableView;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		7D501FE31DAB3301002DF41B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				DEVELOPMENT_TEAM = AXTCK4AA86;
+				INFOPLIST_FILE = FoldawayTableView/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = cn.majinshou.acttos.FoldawayTableView;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
@@ -716,6 +844,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		7D501FE41DAB3301002DF41B /* Build configuration list for PBXNativeTarget "FoldawayTableView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7D501FE21DAB3301002DF41B /* Debug */,
+				7D501FE31DAB3301002DF41B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 		7DC794111D5C67FF007E352C /* Build configuration list for PBXProject "Swift-Acttos" */ = {
 			isa = XCConfigurationList;
