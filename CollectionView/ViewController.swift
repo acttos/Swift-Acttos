@@ -32,7 +32,9 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         let cell: CollectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: "CollectionViewCell", for: indexPath) as! CollectionViewCell;
         
         if ((indexPath as NSIndexPath).section % 2 == 0) {
-            cell.backgroundImageView.image = UIImage.init(data: try! Data(contentsOf: URL(string: "https://avatars2.githubusercontent.com/u/6056509?v=3&s=460")!));
+            //This line below could cause a long time delay, cause it is running on the main thread.
+            //cell.backgroundImageView.image = UIImage.init(data: try! Data(contentsOf: URL(string: "https://avatars2.githubusercontent.com/u/6056509?v=3&s=460")!));
+            cell.backgroundImageView.image = UIImage(named: "avatar.png");
         } else {
             cell.backgroundImageView.image = UIImage(named: "wechat.png");
         }

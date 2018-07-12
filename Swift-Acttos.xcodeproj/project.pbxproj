@@ -30,6 +30,7 @@
 		7D501FDB1DAB3301002DF41B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D501FD91DAB3301002DF41B /* Main.storyboard */; };
 		7D501FDD1DAB3301002DF41B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7D501FDC1DAB3301002DF41B /* Assets.xcassets */; };
 		7D501FE01DAB3301002DF41B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D501FDE1DAB3301002DF41B /* LaunchScreen.storyboard */; };
+		7DA19BFF20F75BA400C4920E /* avatar.png in Resources */ = {isa = PBXBuildFile; fileRef = 7DA19BFE20F75BA400C4920E /* avatar.png */; };
 		7DAB313B1D9D09D200D99649 /* back@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7DAB31331D9D09D200D99649 /* back@2x.png */; };
 		7DAB313C1D9D09D200D99649 /* back@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7DAB31341D9D09D200D99649 /* back@3x.png */; };
 		7DAB313D1D9D09D200D99649 /* forward@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7DAB31351D9D09D200D99649 /* forward@2x.png */; };
@@ -79,6 +80,7 @@
 		7D501FDC1DAB3301002DF41B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7D501FDF1DAB3301002DF41B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7D501FE11DAB3301002DF41B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7DA19BFE20F75BA400C4920E /* avatar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = avatar.png; sourceTree = "<group>"; };
 		7DAB31331D9D09D200D99649 /* back@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "back@2x.png"; sourceTree = "<group>"; };
 		7DAB31341D9D09D200D99649 /* back@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "back@3x.png"; sourceTree = "<group>"; };
 		7DAB31351D9D09D200D99649 /* forward@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "forward@2x.png"; sourceTree = "<group>"; };
@@ -165,6 +167,7 @@
 		7D3287461D803E9600B1A4A8 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				7DA19BFE20F75BA400C4920E /* avatar.png */,
 				7D3287471D803E9600B1A4A8 /* wechat@2x.png */,
 				7D3287481D803E9600B1A4A8 /* wechat@3x.png */,
 			);
@@ -344,7 +347,7 @@
 				TargetAttributes = {
 					7D24A5991D9A58D90057B2FC = {
 						CreatedOnToolsVersion = 8.0;
-						DevelopmentTeam = AXTCK4AA86;
+						DevelopmentTeam = TD37V5LBM9;
 						ProvisioningStyle = Automatic;
 					};
 					7D31788E1D6BF468001F2AC0 = {
@@ -359,7 +362,7 @@
 					};
 					7D501FD21DAB3301002DF41B = {
 						CreatedOnToolsVersion = 8.0;
-						DevelopmentTeam = AXTCK4AA86;
+						DevelopmentTeam = TD37V5LBM9;
 						ProvisioningStyle = Automatic;
 					};
 					7DDC60C81D65D86400AE30D2 = {
@@ -424,6 +427,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7DA19BFF20F75BA400C4920E /* avatar.png in Resources */,
 				7D4EE58E1D7FBABE0076C67E /* LaunchScreen.storyboard in Resources */,
 				7D4EE58B1D7FBABE0076C67E /* Assets.xcassets in Resources */,
 				7D3287491D803E9600B1A4A8 /* wechat@2x.png in Resources */,
@@ -595,11 +599,11 @@
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
-				DEVELOPMENT_TEAM = AXTCK4AA86;
+				DEVELOPMENT_TEAM = TD37V5LBM9;
 				INFOPLIST_FILE = WebView/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = cn.majinshou.acttos.swift.WebView;
+				PRODUCT_BUNDLE_IDENTIFIER = org.acttos.swift.WebView;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_VERSION = 3.0;
@@ -613,11 +617,11 @@
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
-				DEVELOPMENT_TEAM = AXTCK4AA86;
+				DEVELOPMENT_TEAM = TD37V5LBM9;
 				INFOPLIST_FILE = WebView/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = cn.majinshou.acttos.swift.WebView;
+				PRODUCT_BUNDLE_IDENTIFIER = org.acttos.swift.WebView;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 3.0;
@@ -685,11 +689,11 @@
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
-				DEVELOPMENT_TEAM = AXTCK4AA86;
+				DEVELOPMENT_TEAM = TD37V5LBM9;
 				INFOPLIST_FILE = FoldawayTableView/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = cn.majinshou.acttos.FoldawayTableView;
+				PRODUCT_BUNDLE_IDENTIFIER = org.acttos.swift.FoldawayTableView;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_VERSION = 3.0;
@@ -703,11 +707,11 @@
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
-				DEVELOPMENT_TEAM = AXTCK4AA86;
+				DEVELOPMENT_TEAM = TD37V5LBM9;
 				INFOPLIST_FILE = FoldawayTableView/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = cn.majinshou.acttos.FoldawayTableView;
+				PRODUCT_BUNDLE_IDENTIFIER = org.acttos.swift.FoldawayTableView;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 3.0;

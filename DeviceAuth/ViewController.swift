@@ -90,9 +90,9 @@ class ViewController: UIViewController, UIAlertViewDelegate {
     func _showAuthorizationFailureNotice(_ type: String) -> Void {
         DispatchQueue.main.async { 
             var tips: String?;
-            let privacyItem: String = type == AVMediaTypeAudio ? "MICROPHONE" : type == AVMediaTypeVideo ? "CAMERA" : "";
+//            let privacyItem: String = type == AVMediaTypeAudio ? "MICROPHONE" : type == AVMediaTypeVideo ? "CAMERA" : "";
             
-            self.settingsItemURL = URL(string: "prefs:root=Privacy&path=\(privacyItem)");
+            self.settingsItemURL = URL(string: UIApplicationOpenSettingsURLString);
             
             if (type == AVMediaTypeAudio) {
                 tips = "Please allow us to use your Microphone to capture audio by opening 'Settings -> Privacy -> Microphone' to grant.";
